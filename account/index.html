@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <title>Looksmaxer</title>
+</head>
+<body>
+    <div id ="outer">
+        <div id="kind_of_navbar">
+            <div id="left">
+                <img id="logo" src="data:image/jpeg;base64,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" alt="Lion">
+                <p id="only_p">LOOKSMAXER</p>
+            </div>
+            <div id="middle">
+                <a href="" class="in_navbar">About us</a>
+                <a href="" class="in_navbar">Policies</a>
+                <a href="" class="in_navbar">Conditions</a>
+                <a href="" class="in_navbar">bogus</a>
+            </div>
+            <div id="right">
+                <button class="login" role="Login" onclick="window.location.href='/login-page'">Login</button>
+                <!-- <a href="window.location.href='/login-page'"><button class="login" role="Login" onclick="window.location.href='/login-page'">Login</button></a> -->
+                <button class="login" role="signup" onclick="window.location.href='/signup-page'">Signup</button>
+            </div>
+        </div>
+        <div class="fade-line"></div>
+        <div id="page_body1">
+            <div id="inner_page_body1">
+            <h1 class="up" id="one">Guiding software for self improvement </h1>
+            <p class="up" id="p1_of_page_body1">Make your presence <br> absolutely noticable</p>
+            <p class="up" id="p2_of_page_body1">Gain the unprecedented personally specified guidance <br>for your improvement.</p>
+            <div>
+            <button id="this" class="login" role="Login">Get started</button>
+            <button id="this" class="login" role="Login">Try it Free</button>
+            </div>
+            </div>
+        </div>
+        <div id="page_body2">
+            <div class="inner_page_body2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tenetur non autem est accusantium debitis temporibus, similique necessitatibus, maiores quia velit sapiente. Quibusdam soluta nesciunt numquam temporibus doloribus cum quas.
+            Nihil, facilis! Exercitationem iste soluta veniam rem rerum excepturi quam maxime perspiciatis explicabo, consequatur placeat et ea ducimus eligendi qui inventore voluptatem a optio dolorum ex alias impedit numquam repudiandae!</p></div>
+            <div class="inner_page_body2">haha</div>
+            <div class="inner_page_body2">haha</div>
+            <div class="inner_page_body2">haha</div>
+
+        </div>
+        <div id="page_body3">
+            <div id="left_portion">
+                <p id="how">How it works</p>
+                <div class="bundle">
+                <button class="info" onclick="showDiv('myContent1','first' , this )">Self focused guidance</button>
+                <div class="content-box" id="myContent1"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia tempore pariatur architecto omnis odio impedit est qui numquam exercitationem magni, dolore itaque officia esse, maxime dignissimos non aliquid, doloribus modi.</p></div>
+                </div>
+                <div class="bundle">
+                <button class="info" onclick="showDiv('myContent2' , 'second',this)">hi bros</button>
+                <div class="content-box" id="myContent2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quisquam eligendi odio, beatae quod voluptatum nobis soluta corrupti sed iure animi aperiam cum ducimus, veritatis inventore rem, impedit tenetur sunt?</p></div>
+                </div>
+                <div class="bundle">
+                <button class="info" onclick="showDiv('myContent3' ,'third', this)">hi bros</button>
+                <div class="content-box" id="myContent3"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum aliquid iure corrupti delectus, incidunt quisquam molestiae necessitatibus laudantium cupiditate exercitationem consequuntur impedit amet iste voluptates atque rem vel mollitia suscipit!</p></div>
+                </div>
+            </div>
+            <div id="right_portion">
+                <div id="sabotage"></div>
+                <div class="float" id="first"></div>
+                <div class="float" id="second"></div>
+                <div class="float" id="third"></div>
+            </div>
+        </div>
+        <div id="page_body4">
+            <p id="last">Transform Your LifeStyle <br>Right Now</p>
+            <p>fuck you brother</p>
+            <button class="login" role="signup">Signup</button>
+        </div>
+    </div>
+    <script>
+    window.onscroll = function() {
+        const nav = document.getElementById('kind_of_navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    };
+    function showDiv(targetId ,floatId ,clickedButton){
+        const allDivs = document.querySelectorAll(".content-box");
+        allDivs.forEach(div=>{
+            div.style.display = "none";
+        });
+        const allWindows = document.querySelectorAll(".float");
+        allWindows.forEach(div=>{
+            div.style.display = "none";
+        });
+
+        const allButtons = document.querySelectorAll(".info");
+    allButtons.forEach(btn => {
+        btn.style.borderBottomLeftRadius = "10px";
+        btn.style.borderBottomRightRadius = "10px";
+    });
+
+        const targetDiv = document.getElementById(targetId);
+        if(targetDiv){
+            targetDiv.style.display = "block";
+            clickedButton.style.borderBottomLeftRadius = "0px";
+            clickedButton.style.borderBottomRightRadius = "0px";
+        }
+        const targetFloat = document.getElementById(floatId);
+        if(targetFloat){
+            targetFloat.style.display = "block";
+        }
+
+    }
+</script>
+</body>
+</html>

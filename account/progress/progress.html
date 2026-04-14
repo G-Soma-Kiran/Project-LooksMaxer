@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/progress/progress.css') }}">
+    <title>Progress</title>
+</head>
+<body>
+    <div id="container">
+        <div class="animate_left_navbar" id="left_navbar">
+            <div class="navbar1" id="logo"><button id="toggleBtn" >&#9776;</button><h1>LooksMaxer🦁</h1></div>
+            <div class="navbar1" id="personals">
+                <h2>Dashboard</h2>
+                <a href="/../home/home.html"><div class="navbar2" id="Overview"><span class="icon">🏠</span><span class="text">Overview</span></div></a>
+                <a href="/../progress/progress.html"><div class="navbar2" id="progress"><span class="icon">📊</span><span class="text">Progress</span></div></a>
+                <a href="/../workoutPlan/workoutPlan.html"><div class="navbar2" id="workout_plan"><span class="icon">🏋🏽</span><span class="text">Workout Plan</span></div></a>
+                <a href="/../profile/profile.html"><div class="navbar2" id="Profile"><span class="icon">👤</span><span class="text">Profile</span></div></a>
+                <div class="navbar2" id="Achievements"><span class="icon">🏆</span><span class="text">Achievements</span></div>
+            </div>
+
+            <div class="navbar1" id="commercials">
+                <h2>Extras</h2>
+                <div class="navbar2" id="shop"><span class="icon">🛒</span><span class="text">Shop</span></div>
+                <div class="navbar2" id="About"><span class="icon">🛈</span><span class="text">About</span></div>
+                <div class="navbar2" id="Support"><span class="icon">➤</span><span class="text">Support</span></div>
+            </div>
+
+            <div class="navbar1" id="Account">
+                <h2>Account</h2>
+                <div class="navbar2" id="Account_settings"><span class="icon">⏣</span><span class="text">Account Settings</span></div>
+                <div class="navbar2" id="logout"><span class="icon">➜]</span><span class="text">Logout</span></div>
+            </div>
+        </div>
+        <div id="content">
+    <header class="content-header">
+        <h1>Your Progress,Warrior</h1>
+        <p>Keep pushing, the results are coming.</p>
+        <h3  class="section-title" id="daily-checklist">Daily Checklist</h3>
+    </header>
+    
+    <div id="inner_content" class="content_child">
+        <div id="left">    
+            <div id="progress_box">
+            </div>
+        </div>
+        
+        <div id="right">
+            <div class="inner_right">
+                <h3 class="section-title">Activity</h3>
+                <div class="stat-card flex">
+                    <div class="inner-stat-card1">
+                        <div class="week-name">Sun</div>
+                        <div class="week-name">Mon</div>
+                        <div class="week-name">Tue</div>
+                        <div class="week-name">Wed</div>
+                        <div class="week-name">Thur</div>
+                        <div class="week-name">Fri</div>
+                        <div class="week-name">Sat</div>
+                        
+                    </div>
+                    <div class="inner-stat-card2">
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                        <div class="heat-map"></div>
+                </div>
+                <div class="inner-stat-card3">
+                </div>
+                </div>
+            </div>
+            <div class="inner_right">
+            <h3 class="section-title">Statistics</h3>
+            <div class="stat-card">
+                <h4>Todays progress</h4>
+                <div class="stat-value" id="todays-progress">0%</div>
+            </div>
+            <div class="stat-card" >
+                <h4>Weekly Consistency</h4>
+                <div class="stat-value">85%</div>
+            </div>
+            <div class="stat-card">
+                <h4>Current Streak</h4>
+                <div class="stat-value" id="streak">12 Days 🔥</div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="content_child" id="inner_content2">
+        <button onclick="makeGraph('graph')">flip</button>
+        <button onclick="getFitnessPlan()">AI</button>
+        <h3 class="section-title content-header" id="graph">Daily Activity Graph</h3>
+        <div class="bar_graph">
+            
+        </div>
+        
+    </div>
+</div>
+    <script src="progress.js"></script>
+    <script src="{{ url_for('static', filename='/progress/progress.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/home/home.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <div id="container">
+        <div class="animate_left_navbar" id="left_navbar">
+            <div class="navbar1" id="logo"><button id="toggleBtn" >&#9776;</button><h1>LooksMaxer🦁</h1></div>
+            <div class="navbar1" id="personals">
+                <h2>Dashboard</h2>
+                <a href="/../home/home.html"><div class="navbar2" id="Overview"><span class="icon">🏠</span><span class="text">Overview</span></div></a>
+                <a href="/../progress/progress.html"><div class="navbar2" id="progress"><span class="icon">📊</span><span class="text">Progress</span></div></a>
+                <a href="/../workoutPlan/workoutPlan.html"><div class="navbar2" id="workout_plan"><span class="icon">🏋🏽</span><span class="text">Workout Plan</span></div></a>
+                <a href="/../profile/profile.html"><div class="navbar2" id="Profile"><span class="icon">👤</span><span class="text">Profile</span></div></a>
+                <div class="navbar2" id="Achievements"><span class="icon">🏆</span><span class="text">Achievements</span></div>
+            </div>
+
+            <div class="navbar1" id="commercials">
+                <h2>Extras</h2>
+                <div class="navbar2" id="shop"><span class="icon">🛒</span><span class="text">Shop</span></div>
+                <div class="navbar2" id="About"><span class="icon">🛈</span><span class="text">About</span></div>
+                <div class="navbar2" id="Support"><span class="icon">➤</span><span class="text">Support</span></div>
+            </div>
+
+            <div class="navbar1" id="Account">
+                <h2>Account</h2>
+                <div class="navbar2" id="Account_settings"><span class="icon">⏣</span><span class="text">Account Settings</span></div>
+                <div class="navbar2" id="logout"><span class="icon">➜]</span><span class="text">Logout</span></div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="starting" class = "content_child">
+                <h1>Welcome Back, King 🦁</h1>
+                <p>Here is your aesthetic breakdown for today.</p>
+            </div>
+            <div class="content_child" id="Your_Personal_Summary">
+                <div id="heading1"><h2>Your Personal Summary</h2></div>
+                <div id="Summary_Contents">
+                    <div id="first" class="Summary_Contents_Child">
+                        <div>Body Mass Index</div>
+                        <div class="circle">
+                              <svg width="120" height="120">
+                                <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                <circle cx="60" cy="60" r="50" class="progress" id="bmiProgressCircle"></circle>
+                              </svg>
+                              <div class="circle_text" id="bmiPercentText">0</div>
+                            </div>
+                            <div class="Summary_text"> According to your BMI : </div>
+                            <div>Overweight</div>
+                        </div>
+
+                    
+                    <div class="Summary_Contents_Child">
+                        <div>Calorie Intake</div>
+                       
+                        <div class="circle">
+                              <svg width="120" height="120">
+                                <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                <circle cx="60" cy="60" r="50" class="progress" id="calorieProgressCircle"></circle>
+                              </svg>
+                              <div class="circle_text" id="caloriePercentText">0</div>
+                            </div>
+                        <div class="Summary_text">Daily Calorie Intake for weight loss :</div>
+                        <div>20</div>
+                        
+                    </div>
+                    <div class="Summary_Contents_Child">
+                        <div>Protien Intake</div>
+                        <div class="circle">
+                              <svg width="120" height="120">
+                                <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                <circle cx="60" cy="60" r="50" class="progress" id="protienProgressCircle"></circle>
+                              </svg>
+                              <div class="circle_text" id="protienPercentText">0</div>
+                            </div>
+                        <div class="Summary_text">Daily protien Intake for Muscle growth : </div>
+                        <div>10</div>
+                    </div>
+                    <div id="last" class="Summary_Contents_Child">
+                        <div>something Intake</div>
+                        <div class="circle">
+                              <svg width="120" height="120">
+                                <circle cx="60" cy="60" r="50" class="bg"></circle>
+                                <circle cx="60" cy="60" r="50" class="progress" id="somethingProgressCircle"></circle>
+                              </svg>
+                              <div class="circle_text" id="somethingPercentText">0</div>
+                            </div>
+                            <div class="Summary_text">Lorem ipsum dolor sit amet </div>
+                            <div>Lorem ipsum dolor </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_child" id="food_plan">
+                    <div id="heading2"><h2>Your Personalized food plan</h2></div>
+                    <div id="food_table">
+                        <table>
+                            <tr id="weekRow">
+                                <td class="border_yes"><button class="td_button" id="week1" onclick="changeColor(this)">Week 01</button></td>
+                                <td class="border_yes"><button class="td_button" id="week2" onclick="changeColor(this)">Week 02</button></td>
+                                <td class="border_yes"><button class="td_button" id="week3" onclick="changeColor(this)">Week 03</button></td>
+                                <td class="border_yes"><button class="td_button" id="week4" onclick="changeColor(this)">Week 04</button></td>
+                                <td class="border_yes"><button class="td_button" id="week5" onclick="changeColor(this)">Week 05</button></td>
+                                <td class="border_yes"><button class="td_button" id="week6" onclick="changeColor(this)">Week 06</button></td>
+                                <td  class="border_yes">
+                                                        <ul >
+                                                            <li class="no_bottom_border"><button class="td_button td_list_button" onclick="nextBlock()">next➡</button></li>
+                                                            <li class="no_bottom_border"><button class="td_button td_list_button" onclick="prevBlock()">⬅prev</button></li>
+                                                        </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><button class="td2_button" id="monday" onclick="changeColour(this)">Monday</button></td>
+                                <td><button class="td2_button" id="tuesday" onclick="changeColour(this)">Tuesday</button></td>
+                                <td><button class="td2_button" id="wednesday" onclick="changeColour(this)">Wednesday</button></td>
+                                <td><button class="td2_button" id="thursday" onclick="changeColour(this)">Thursday</button></td>
+                                <td><button class="td2_button" id="friday" onclick="changeColour(this)">Friday</button></td>
+                                <td><button class="td2_button" id="saturday" onclick="changeColour(this)">Saturday</button></td>
+                                <td><button class="td2_button" id="sunday" onclick="changeColour(this)">Sunday</button></td>
+                            </tr>
+                        </table>
+                        <div id="meal_content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="{{ url_for('static', filename='/home/home.js') }}"></script>
+</body>
+</html>

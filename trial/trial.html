@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trial.css">
+    <title>Document</title>
+</head>
+<body>
+
+   <div class="cabinet-container" id="main_layout">
+    <div class="folder-stack" id="left_side">
+        <div class="folder-card" onclick="openFolder(this)">
+            <div class="folder-tab">Workout Routine 🦁</div>
+            <div class="folder-content">
+                <h3>Session Details</h3>
+                <p>Focus: Hypertrophy and Progressive Overload.</p>
+            </div>
+        </div>
+        
+        <div class="folder-card" onclick="openFolder(this)">
+            <div class="folder-tab">Diet Plan 🥩</div>
+            <div class="folder-content">
+                <h3>Nutrition</h3>
+                <p>Bulk phase: 3200 calories, high protein.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="media-viewer" id="right_side">
+        <div class="media-placeholder">
+            <p>Select a folder to view gallery</p>
+            <video controls width="100%"><source src="" type="video/mp4"></video>
+        </div>
+    </div>
+</div>
+<script src="trial.js"></script>
+</body>
+</html>

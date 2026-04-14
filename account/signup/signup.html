@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/signup/signup.css') }}">
+    <title>Create Account</title>
+</head>
+<body>
+<div class="container">
+    <h1>Register</h1>
+    <div class="main-container">
+        <form>
+        <div class="input-group">
+            <div class="input-data" id="username">
+                <input type="text" name="username" placeholder="Username" pattern="[A-Za-z_][A-Za-z0-9_]{0,12}">
+                <span class="icon">👤</span>
+            </div>
+            <div class="input-data pass" id="password" >
+                <input type="password" name="password" placeholder="Password" pattern="[A-Za-z0-9_]{8,}"  >
+                <span id="slash0" class="show">╱</span>
+                <span class="icon show" id="eye">👁</span>
+            </div>
+            <div class="input-data pass" id="confirm-password">
+                <input type="password" name="confirm-password" placeholder="confirm Password" pattern="[A-Za-z0-9_]{8,}"  >
+                <span id="slash1" class="show">╱</span>
+                <span class="icon show" id="eye">👁</span>
+            </div>
+        </div>
+
+        <div class="options">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot password?</a>
+        </div>
+
+        <div class="ending">
+            <button class="login-btn">Sign up</button>
+            <p class="register-text">Already have an account? <a onclick="window.location.href='/login-page'" id="pointer">Login/Sign in</a></p>
+        </div>
+        </form>
+    </div>
+    <div class="status-box"></div>
+</div>
+<script src="signup.js"></script>
+<script src="{{ url_for('static', filename='/signup/signup.js') }}"></script>
+
+</body>
+</html>

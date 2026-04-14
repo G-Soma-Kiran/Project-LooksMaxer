@@ -1,0 +1,127 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('stars.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.container {
+    min-width: 300px;
+    min-height : 350px;
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-data {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px; 
+    padding: 10px 20px;
+}
+
+.input-data input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+#eye , #pointer{
+    cursor: pointer;
+}
+#slash0 , #slash1{
+    position: relative;
+    right: -15px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.input-data input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+.options a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.register-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.status-box{
+    width: 300px;
+    text-align: center;
+}
+
+
+@keyframes appear {
+    from{
+        opacity : 0;
+    }
+    to{
+        opacity : 1;
+    }
+}
+
+.emerge{
+    animation: appear 0.3s ease;
+}
