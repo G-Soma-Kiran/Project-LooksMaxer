@@ -21,13 +21,17 @@ let parameters = {}
 async function loadUserData() {
     const response = await fetch('http://127.0.0.1:5000/send-user-data');
     const data = await response.json();
-    parameters = data;
+    parameters = data['parameters'];
     console.log(parameters);
 }
 async function init() {
     // console.log("loading...");
     // await getFitnessPlan();
     await loadUserData(); 
+    if(!(Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks")))){
+        confirm("Please start a plan first... Redirecting to profile page");
+        window.location.href='/profile/profile.html';
+    }
     Object.values(parameters.todayTasks[`${normalDate}`]).forEach(category => {
         totalOfToday += Object.keys(category.subtask).length;
     });

@@ -36,6 +36,7 @@
         <div id="content">
             <header class="content-header">
                 <h1>Profile</h1>
+                <p id="status-profile"><span></span></p>
             </header>
             <div id="profile-container">
                 <div id="profile-card">
@@ -70,23 +71,23 @@
                        </div>
                        <div class="main-user-info-container">
                             <div class="main-user-info first">Height</div>
-                            <div class="main-user-info second">No Data</div>
+                            <div class="main-user-info second" id="HEIGHT">No Data</div>
                        </div>
                        <div class="main-user-info-container">
                             <div class="main-user-info first">weight</div>
-                            <div class="main-user-info second">No Data</div>
+                            <div class="main-user-info second" id="WEIGHT">No Data</div>
                        </div>
                        <div class="main-user-info-container">
                             <div class="main-user-info first">Age</div>
-                            <div class="main-user-info second">No Data</div>
+                            <div class="main-user-info second" id="AGE">No Data</div>
                        </div>
                        <div class="main-user-info-container">
                             <div class="main-user-info first">Nationality</div>
-                            <div class="main-user-info second">No Data</div>
+                            <div class="main-user-info second" id ="NATIONALITY">No Data</div>
                        </div>
                        <div class="main-user-info-container">
                             <div class="main-user-info first">Plan</div>
-                            <div class="main-user-info second">No Data</div>
+                            <div class="main-user-info second" id="PLAN">Inactive</div>
                        </div>
                     </div>
                 </div>
@@ -120,6 +121,17 @@
             </div>
     </div>
             </div>
+        <div id="looksmax-container">
+            <div class="activate-looksmax-container">
+                <label for="days">Select Transformation Period:</label>
+                <input type="number" id="days" name="days" min="1" max="60" value="7">
+                <button id="generate-routine-button" onclick="AI()">Start LooksMaxxing Now</button>
+            </div>
+            <div class="activate-looksmax-container">
+                <label for="quiz">Take a reality quiz:</label>
+                <button id="quiz-button">Quiz</button>
+            </div>
+        </div>
         </div>
     <script src="profile.js"></script>
     <script src="{{ url_for('static', filename='/profile/profile.js') }}"></script>

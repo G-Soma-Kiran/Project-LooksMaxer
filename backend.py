@@ -75,6 +75,10 @@ def signup():
     
     db[data['username']] = {}
     db[data['username']]['password'] = data['password']
+    db[data['username']]['parameters'] = {}
+    db[data['username']]['parameters']['streak'] = 0
+    db[data['username']]['personals'] = {}
+    db[data['username']]['parameters']['dailyTotal'] = {}
 
     with open('data.json', 'w') as f:
         json.dump(db, f)
@@ -107,7 +111,7 @@ def send_user_data():
     try:
         with open('data.json', 'r') as f:
             data = json.load(f) 
-            return jsonify(data[session['username']]['parameters'])
+            return jsonify(data[session['username']])
     except FileNotFoundError:
         return jsonify({"status": "error", "message": "File not found"}), 404
 
@@ -160,9 +164,9 @@ def store_user_profile_parameters():
         return jsonify({"status": "user does not exists"})
 
 
-    db[session['username']]['parameters']['personals'] = {}
+    db[session['username']]['personals'] = {}
     for i in data:
-        db[session['username']]['parameters']['personals'][i] = data[i]
+        db[session['username']]['personals'][i] = data[i]
     with open('data.json', 'w') as f:
         json.dump(db, f)
 

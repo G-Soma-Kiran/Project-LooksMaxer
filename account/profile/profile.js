@@ -37,107 +37,41 @@ navbar.addEventListener('animationend', () => {
 
 
 
-
-
-
-
-const API_KEY = "API_KEY"; 
-const MODEL = "gemini-2.5-flash";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
-const userStats = {
-  weight: "75kg",
-  height: "180cm",
-  age: 22,
-  nationality: "Indian",
-  period: "2 days",
-  start : normalDate,
-};
-
-const requestBody = {
-  // 1. Tell the model WHO it is and HOW to respond
-  systemInstruction: {
-    parts: [{ 
-      text: `You are an elite fitness and lifestyle coach. 
-      Your goal is to provide a daily task schedule to help users become physically and professionally superior to the average person. 
-      You MUST respond ONLY with a JSON object following the exact schema provided by the user. 
-      Respond ONLY with JSON in this exact structure:
-      {
-        "todayTasks": {
-          "${userStats.start}": {
-            "Health": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Career": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Personal": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "My Thing": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } }
-          },
-        "Apr 13": {
-            "Some Task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Some Other task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Some task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } }
-          }
-        }
-    }
-        and so on . Here the task categories and tasks can be anything that are inline with the development of the user.
-        the keys of "todayTasks" elements would start from the start date and woul extend until the period of time 
-        the user has provided.
-      Ensure tasks under 'Health' are scientifically calibrated for the user's height, weight, and age.` 
-    }]
-  },
-
-  // 2. Provide the user's specific data
-  contents: [{
-    parts: [{ 
-      text: `Generate a task list for a ${userStats.age}-year-old from ${userStats.nationality}, 
-      height ${userStats.height}, weight ${userStats.weight}, for a period of ${userStats.period}. 
-      Starting date: ${userStats.start}.` 
-    }]
-  }],
-
-  // 3. Force JSON output
-  generationConfig: {
-    temperature: 0.4, // Lower temperature for more consistent formatting
-    responseMimeType: "application/json"
-  }
-};
-
-async function getFitnessPlan() {
-  try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(requestBody)
-    });
-
+let userData = {};
+let user ={};
+async function loadUserData() {
+    const response = await fetch('http://127.0.0.1:5000/send-user-data');
     const data = await response.json();
-    
-    // The model returns a string of JSON inside the parts
-    const planString = data.candidates[0].content.parts[0].text;
-    const planJson = JSON.parse(planString);
-    try {
-        const res = await fetch("http://127.0.0.1:5000/trial-ai", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(
-                planJson
-            )
-        });
+    user = data;
+    userData = data.personals;
+    console.log(`${userData['Height']}cm`);
+}
 
-        const Data = await res.json();
-        console.log(Data);
 
-    } catch (err) {
-        console.error("Error:", err);
-    }
-    
+// loadUserData();
+function renderPage(){
+  if(Object.keys(userData).length !== 0)
+  {document.querySelector("#HEIGHT").innerText = `${userData['Height']}cm`;
+  document.querySelector("#WEIGHT").innerText = `${userData['Weight']}Kg`;
+  document.querySelector("#AGE").innerText = `${userData['Age']}`;
+  document.querySelector("#NATIONALITY").innerText = `${userData['Nationality']}`;}
+  if(Object.keys(user.parameters).length !== 0 && ( Object.keys(user.parameters).includes("todayTasks"))){
+    document.querySelector("#PLAN").innerText = "Active";
 
-    // console.log(planJson.todayTasks["Apr 4"].Health);
-    console.log("Done HERE");
-    console.log( "HELLO WORLD", planString); 
-  } catch (error) {
-    console.error("Failed to generate plan:", error);
+  }else{
+    document.querySelector("#PLAN").innerText = "Inactive";
+    const secondChild = document.querySelectorAll(".boxes :nth-child(2)");
+    secondChild.forEach((val)=>{
+      val.innerText = "-";
+    })
   }
 }
+
+// renderPage();
+
+
+
+
 
 
 
@@ -196,3 +130,126 @@ updateBtn.addEventListener('click' , (e)=>{
     alert("Some Error Occured");
   }
 })
+
+
+
+let userStats = {};
+
+
+async function init() {
+    await loadUserData(); 
+    renderPage();         
+    userStats = {
+        weight: userData['Weight'],
+        height: userData['Height'],
+        age: userData['Age'],
+        nationality: userData['Nationality'],
+        period: "7 days",
+        start: normalDate,
+    };
+    document.querySelector("#status-profile").innerHTML = `status : <span>${Object.keys(userData).length !== 0 ? "complete" : "incomplete"}</span>`;
+}
+
+init();
+
+
+async function getFitnessPlan(userStats) {
+const API_KEY = ""; 
+const MODEL = "gemini-2.5-flash";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
+
+const requestBody = {
+  systemInstruction: {
+    parts: [{ 
+      text: `You are an elite fitness and lifestyle coach. 
+      Your goal is to provide a daily task schedule to help users become physically and professionally superior to the average person. 
+      You MUST respond ONLY with a JSON object following the exact schema provided by the user. 
+      Respond ONLY with JSON in this exact structure:
+      {
+        "todayTasks": {
+          "${userStats.start}": {
+            "Health": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
+            "Career": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
+            "Personal": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
+            "My Thing": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } }
+          },
+        "Apr 13": {
+            "Some Task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
+            "Some Other task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
+            "Some task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } }
+          }
+        }
+    }
+        and so on . Here the task categories and tasks can be anything that are inline with the development of the user.
+        the keys of "todayTasks" elements would start from the start date and woul extend until the period of time 
+        the user has provided.
+      Ensure tasks under 'Health' are scientifically calibrated for the user's height, weight, and age.` 
+    }]
+  },
+
+  contents: [{
+    parts: [{ 
+      text: `Generate a task list for a ${userStats.age}-year-old from ${userStats.nationality}, 
+      height ${userStats.height}, weight ${userStats.weight}, for a period of ${userStats.period}. 
+      Starting date: ${userStats.start}.` 
+    }]
+  }],
+
+  generationConfig: {
+    temperature: 0.4, 
+    responseMimeType: "application/json"
+  }
+};
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(requestBody)
+    });
+
+    const data = await response.json();
+    
+    const planString = data.candidates[0].content.parts[0].text;
+    const planJson = JSON.parse(planString);
+    try {
+        const res = await fetch("http://127.0.0.1:5000/trial-ai", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(
+                planJson
+            )
+        });
+
+        const Data = await res.json();
+        console.log(Data);
+
+    } catch (err) {
+        console.error("Error:", err);
+    }
+    
+
+    // console.log(planJson.todayTasks["Apr 4"].Health);
+    console.log("Done HERE");
+    console.log( "HELLO WORLD", planString); 
+    return true;
+  } catch (error) {
+    console.error("Failed to generate plan:", error);
+    return false;
+  }
+}
+
+async function AI(){
+  if(document.querySelector("#status-profile span").innerText === "complete"){
+    userStats.period  = `${document.querySelector("#days").value} days`;
+    console.log(userStats , "Bro running");
+    const statusOfMax = await getFitnessPlan(userStats);
+    if(statusOfMax){
+      confirm("You are all set");
+      window.location.reload();
+    }
+  }else{
+    confirm("Complete profile first");
+  }
+}
