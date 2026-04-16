@@ -34,14 +34,91 @@
             </div>
         </div>
         <div id="content">
+            <header class="content-header">
+                <h1>Profile</h1>
+            </header>
             <div id="profile-container">
                 <div id="profile-card">
                     <div id="upper-profile-card">
-                        <div id="left-upper-profile-card"></div>
-                        <div id="right-upper-profile-card"></div>
+                        <div id="left-upper-profile-card">
+                            <div class="inner-left-upper-profile-card" id="Image"><img src="lion.png" alt=""></div>
+                            <div class="inner-left-upper-profile-card" id="below-image">
+                                <div><button class="complete-profile">Complete Profile</button></div>
+                            </div>
+                        </div>
+                        <div id="right-upper-profile-card">
+                            <div id="user-name">King</div>
+                            <div id="attrs">
+                                <div class="boxes" id="potential">
+                                    <span>POTENTIAL</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="boxes" id="consistency">
+                                    <span>CONSISTENCY</span>
+                                    <span>streak</span>
+                                </div>
+                                <div class="boxes" id="current-goal">
+                                    <span>Current Goal</span>    
+                                    <span>Bulk</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="lower-profile-card"></div>
+                    <div id="lower-profile-card">
+                        <div class="main-user-info-container">
+                            <div class="main-user-info first" id = "section-title">User Data</div>
+                       </div>
+                       <div class="main-user-info-container">
+                            <div class="main-user-info first">Height</div>
+                            <div class="main-user-info second">No Data</div>
+                       </div>
+                       <div class="main-user-info-container">
+                            <div class="main-user-info first">weight</div>
+                            <div class="main-user-info second">No Data</div>
+                       </div>
+                       <div class="main-user-info-container">
+                            <div class="main-user-info first">Age</div>
+                            <div class="main-user-info second">No Data</div>
+                       </div>
+                       <div class="main-user-info-container">
+                            <div class="main-user-info first">Nationality</div>
+                            <div class="main-user-info second">No Data</div>
+                       </div>
+                       <div class="main-user-info-container">
+                            <div class="main-user-info first">Plan</div>
+                            <div class="main-user-info second">No Data</div>
+                       </div>
+                    </div>
                 </div>
+                <div id="update-form-background">
+            <div id="update-form-card">
+                <div class="form-title">
+                    <h3>UPDATE CREDENTIALS</h3>
+                    <button id="close-form">✖</button>
+                </div>
+                
+                <form id="user-data-form">
+                    <div class="inputs">
+                        <label>HEIGHT (cm)</label>
+                        <input type="number" id="input-height" placeholder="Eg - 172cm" required>
+                    </div>
+                    <div class="inputs">
+                        <label>WEIGHT (kg)</label>
+                        <input type="number" id="input-weight" placeholder="Eg - 60" required>
+                    </div>
+                    <div class="inputs">
+                        <label>AGE</label>
+                        <input type="number" id="input-age" placeholder="Eg - 18" required>
+                    </div>
+                    <div class="inputs">
+                        <label>NATIONALITY</label>
+                        <input type="text" id="input-nationality" placeholder="Eg - Indian" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Update</button>
+                </form>
+            </div>
+    </div>
             </div>
         </div>
     <script src="profile.js"></script>

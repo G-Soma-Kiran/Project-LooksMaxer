@@ -143,8 +143,30 @@ def store_data():
 def profile_page():
     return render_template("/profile/profile.html")
 
+@app.route('/store-user-profile-parameters' , methods=["POST"])
+def store_user_profile_parameters():
+    data = request.json
+    if not data :
+        return jsonify({"status": "invalid data"}), 400
+
+    try:
+        with open('data.json', 'r') as f:
+            db = json.load(f)
+    except FileNotFoundError:
+        db = {}
 
 
+    if session['username'] not in db:
+        return jsonify({"status": "user does not exists"})
+
+
+    db[session['username']]['parameters']['personals'] = {}
+    for i in data:
+        db[session['username']]['parameters']['personals'][i] = data[i]
+    with open('data.json', 'w') as f:
+        json.dump(db, f)
+
+    return jsonify({"status": "success"})
 
 
 

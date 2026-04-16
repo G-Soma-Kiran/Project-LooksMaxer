@@ -138,3 +138,61 @@ async function getFitnessPlan() {
     console.error("Failed to generate plan:", error);
   }
 }
+
+
+
+
+
+const cover = document.querySelector('#update-form-background');
+const trigger = document.querySelector('.complete-profile'); 
+const closeBtn = document.querySelector('#close-form');
+const updateBtn = document.querySelector(".submit-btn");
+
+trigger.addEventListener('click', () => {
+    cover.style.display = 'flex'; 
+});
+
+closeBtn.addEventListener('click', () => {
+    cover.style.display = 'none';
+});
+
+async function storeData(data){
+  try{
+  const response = await fetch('http://127.0.0.1:5000/store-user-profile-parameters' , {
+    method : "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(
+        data 
+    )
+    
+  })
+  if(response.ok){
+    return true;
+  }else{
+    return false;
+  }
+  ;}
+  catch(err){
+    console.error("Error in storeData : " , err);
+    return false;
+  }
+}
+
+updateBtn.addEventListener('click' , (e)=>{
+  e.preventDefault();
+  const data = {
+    Height  : `${document.querySelector("#input-height").value}`,
+    Weight  : `${document.querySelector("#input-weight").value}`,
+    Age  : `${document.querySelector("#input-age").value}`,
+    Nationality  : `${document.querySelector("#input-nationality").value}`,
+  }
+  let storeDataStatus = storeData(data);
+  closeBtn.click();
+  if(storeDataStatus){
+    window.location.reload();
+  }else{
+    alert("Some Error Occured");
+  }
+})
