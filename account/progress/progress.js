@@ -32,12 +32,14 @@ async function init() {
         totalOfToday += Object.keys(category.subtask).length;
     });
     if(normalDate in parameters.dailyTotal)
-    {renderProgress();     }
+    {
+        renderProgress();
+    }
     else{
-        if(getPreviousDate(normalDate) in parameters.dailyTotal){
+        if(getPreviousDate(normalDate) in parameters.dailyTotal  && parameters.dailyTotal[`${getPreviousDate(normalDate)}`][0] > 0){
             parameters.streak+=1;
         }else{
-            parameters.streak=1;
+            parameters.streak=0;
         }
         await storeData();
         renderProgress();
@@ -196,6 +198,9 @@ function heatMap(number , total , date=normalDate){
     const ratio = value/100; 
     const dynamicColor = `hsl(145, ${41 + (ratio * 40)}%, ${70 - (ratio * 25)}%)`;
     TodaysHeatMapCell.style.backgroundColor = dynamicColor;
+    if(number === 0){
+        TodaysHeatMapCell.style.backgroundColor = "rgb(159, 160, 157)";
+    }
 
 }
 //Heat map end
@@ -278,6 +283,7 @@ async function updateProgress(checkbox , loadingAtStart=false) {
     if(!loadingAtStart){
         await storeData();
     }
+    document.querySelector("#streak").innerText=`${parameters.streak + (parameters.dailyTotal[`${normalDate}`][0] > 0? 1 : 0)} Days 🔥`;
 
 }
 //Daily Task Bar Graph Update end
@@ -447,7 +453,7 @@ function renderProgress(){
     createDailyTask();
     validateDailyTask();
     createHeatMap();
-    document.querySelector("#streak").innerText=`${parameters.streak} Days 🔥`;
+    document.querySelector("#streak").innerText=`${parameters.streak + (parameters.dailyTotal[`${normalDate}`][0] > 0? 1 : 0)} Days 🔥`;
     // getFitnessPlan();
 
 }

@@ -1,3 +1,11 @@
+const now=new Date();
+const normalDate = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+const dayOfWeek = now.getDay();  // Returns 0-6 (0 is Sunday, 6 is Saturday)
+const dayOfMonth = now.getDate(); // Returns 1-31
+const month      = now.getMonth() ; // Returns 1-12 (We add 1 because JS starts at 0)
+const year       = now.getFullYear();  // Returns 4-digit year (e.g., 2026)
+
 // navbar change 
 const btn = document.getElementById("toggleBtn");
 const navbar = document.getElementById("left_navbar");
@@ -126,7 +134,6 @@ async function getFitnessPlan() {
     // console.log(planJson.todayTasks["Apr 4"].Health);
     console.log("Done HERE");
     console.log( "HELLO WORLD", planString); 
-    // Now you can save this to your data.json or database
   } catch (error) {
     console.error("Failed to generate plan:", error);
   }

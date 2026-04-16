@@ -138,6 +138,16 @@ def store_data():
     return jsonify({"status": "success"})    
 
 
+
+@app.route('/profile/profile.html')
+def profile_page():
+    return render_template("/profile/profile.html")
+
+
+
+
+
+
 @app.route('/trial-ai' , methods=['POST'])
 def trial_ai():
     data = request.json
