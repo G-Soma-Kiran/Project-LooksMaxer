@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="workoutPlan.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/workoutPlan/workoutPlan.css') }}">
     <title>Workout Plan</title>
 </head>
 <body>
@@ -32,20 +33,26 @@
                 <div class="navbar2" id="logout"><span class="icon">➜]</span><span class="text">Logout</span></div>
             </div>
         </div>
-        <div id="content">
-            <button onclick="classChange(this)">CHANGE</button>
-            <div id="workouts" class="content_child">
-                <div>
-                    <div class="plans"></div>
-                    <div class="plans"></div>
-                    <div class="plans"></div>
-                    <div class="plans"></div>
-                    <div class="plans"></div>
-                    <div class="plans"></div>
-                </div>
+            <div id="content">
+                <div class="workout-list">
+    <table id="exercise-table">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Exercise</th>
+                <th>Sets</th>
+                <th>Reps</th>
+            </tr>
+        </thead>
+        <tbody id="exercise-body">
+            
+            </tbody>
+    </table>
+</div>
             </div>
         </div>
     </div>
     <script src="workoutPlan.js"></script>
+    <script src="{{ url_for('static', filename='/workoutPlan/workoutPlan.js') }}"></script>
 </body>
 </html>

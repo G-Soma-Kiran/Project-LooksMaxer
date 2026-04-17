@@ -196,24 +196,96 @@ body {
     padding: 40px;
     overflow-y: auto;
     background: radial-gradient(circle at top right, #1a1a1a, #0a0a0a);
+    display: flex;
+
     
 }
 
-#workouts{
-    transition: 1s ease-in-out;
+
+.workout-list {
+    width: 100%;
+    background: rgba(22, 22, 22, 0.7); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid #333;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.leftify{
-    display : grid;
-    grid-template-columns: 1fr  1fr;
+#exercise-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
 }
-.plans{
-    background-color: pink;
-    height : 100px;
-    width : 100%;
-    border-radius: 15px;
-    position : relative;
+
+#exercise-table thead tr {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
 }
-.plans:hover{
-    transform: translateX(60px);
+
+#exercise-table th {
+    padding: 20px;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+
+#exercise-table td {
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.exercise-row {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.exercise-row:hover {
+    background: rgba(255, 215, 0, 0.03); 
+    transform: scale(1.002);
+}
+
+.exercise-row:last-child td {
+    border-bottom: none;
+}
+
+.exercise-row td:nth-child(2) {
+    font-weight: 600;
+    color: #fff;
+}
+
+.status-cell {
+    width: 50px;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    color: #000;
+    font-size: 12px;
+    top: -1px;
+    left: 2px;
 }

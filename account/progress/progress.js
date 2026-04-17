@@ -32,7 +32,7 @@ async function init() {
         confirm("Please start a plan first... Redirecting to profile page");
         window.location.href='/profile/profile.html';
     }
-    Object.values(parameters.todayTasks[`${normalDate}`]).forEach(category => {
+    Object.values(parameters.todayTasks[`${normalDate}`].tasks).forEach(category => {
         totalOfToday += Object.keys(category.subtask).length;
     });
     if(normalDate in parameters.dailyTotal)
@@ -52,12 +52,12 @@ async function init() {
 
 function createDailyTask(){
 const progress__Box = document.querySelector("#progress_box");
-const todayTasksKeys = Object.keys(parameters.todayTasks[`${normalDate}`]);
+const todayTasksKeys = Object.keys(parameters.todayTasks[`${normalDate}`].tasks);
 todayTasksKeys.forEach((val , index)=>{
 
     let useNthrow = document.createElement('div');
     useNthrow.innerHTML ="";
-    const category = parameters.todayTasks[`${normalDate}`][val]; 
+    const category = parameters.todayTasks[`${normalDate}`].tasks[val]; 
     const subtaskObj = category.subtask;
     const subtaskKeys = Object.keys(subtaskObj);
     subtaskKeys.forEach((value)=>{
@@ -251,17 +251,17 @@ async function updateProgress(checkbox , loadingAtStart=false) {
         checkbox.parentElement.style.color = "#b2bec3";
         checkbox.setAttribute("data-clicked" , "true");
         if(!loadingAtStart)
-        {parameters.todayTasks[`${normalDate}`][`${card.querySelector(".card-title").innerText}`].completed+=1;}
+        {parameters.todayTasks[`${normalDate}`].tasks[`${card.querySelector(".card-title").innerText}`].completed+=1;}
         todaysProgress+=1;
     } else {
         checkbox.parentElement.style.textDecoration = "none";
         checkbox.parentElement.style.color = "inherit";
         checkbox.setAttribute("data-clicked" , "false");
         if(!loadingAtStart)
-        {parameters.todayTasks[`${normalDate}`][`${card.querySelector(".card-title").innerText}`].completed-=1;}
+        {parameters.todayTasks[`${normalDate}`].tasks[`${card.querySelector(".card-title").innerText}`].completed-=1;}
         todaysProgress-=1;
     }
-    parameters.todayTasks[`${normalDate}`][`${card.querySelector(".card-title").innerText}`].subtask[`${checkbox.parentElement.querySelector("span").innerText}`] =`${checkbox.getAttribute("data-clicked")}`;
+    parameters.todayTasks[`${normalDate}`].tasks[`${card.querySelector(".card-title").innerText}`].subtask[`${checkbox.parentElement.querySelector("span").innerText}`] =`${checkbox.getAttribute("data-clicked")}`;
 
     document.getElementById("todays-progress").innerText = `${Math.round(todaysProgress*100/totalOfToday)}%`;
     const total = card.querySelectorAll('input[type="checkbox"]').length;
@@ -441,7 +441,7 @@ async function storeData(){
 
 
 function renderProgress(){
-//     Object.values(parameters.todayTasks[`${normalDate}`]).forEach(category => {
+//     Object.values(parameters.todayTasks[`${normalDate}`].tasks).forEach(category => {
 //     totalOfToday += Object.keys(category.subtask).length;
 // });
     gridMaker();

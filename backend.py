@@ -105,6 +105,9 @@ def progress_page():
     return render_template("/progress/progress.html")
 
 
+@app.route('/workoutPlan/workoutPlan.html')
+def workoutPlan_page():
+    return render_template("/workoutPlan/workoutPlan.html")
 
 @app.route('/send-user-data')
 def send_user_data():

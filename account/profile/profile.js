@@ -51,15 +51,18 @@ async function loadUserData() {
 // loadUserData();
 function renderPage(){
   if(Object.keys(userData).length !== 0)
-  {document.querySelector("#HEIGHT").innerText = `${userData['Height']}cm`;
-  document.querySelector("#WEIGHT").innerText = `${userData['Weight']}Kg`;
-  document.querySelector("#AGE").innerText = `${userData['Age']}`;
+  {document.querySelector("#HEIGHT").innerText = `${userData['Height']} cm`;
+  document.querySelector("#WEIGHT").innerText = `${userData['Weight']} Kg`;
+  document.querySelector("#AGE").innerText = `${userData['Age']} yrs`;
   document.querySelector("#NATIONALITY").innerText = `${userData['Nationality']}`;}
   if(Object.keys(user.parameters).length !== 0 && ( Object.keys(user.parameters).includes("todayTasks"))){
     document.querySelector("#PLAN").innerText = "Active";
+    document.querySelector("#Activate-button").style.display = "none";
+
 
   }else{
     document.querySelector("#PLAN").innerText = "Inactive";
+    document.querySelector("#Activate-button").style.display = "block";
     const secondChild = document.querySelectorAll(".boxes :nth-child(2)");
     secondChild.forEach((val)=>{
       val.innerText = "-";
@@ -81,6 +84,7 @@ const cover = document.querySelector('#update-form-background');
 const trigger = document.querySelector('.complete-profile'); 
 const closeBtn = document.querySelector('#close-form');
 const updateBtn = document.querySelector(".submit-btn");
+const Form = document.querySelector("#user-data-form");
 
 trigger.addEventListener('click', () => {
     cover.style.display = 'flex'; 
@@ -115,6 +119,9 @@ async function storeData(data){
 }
 
 updateBtn.addEventListener('click' , (e)=>{
+  if(!Form.checkValidity()){
+    return;
+  }
   e.preventDefault();
   const data = {
     Height  : `${document.querySelector("#input-height").value}`,
@@ -165,24 +172,40 @@ const requestBody = {
       Your goal is to provide a daily task schedule to help users become physically and professionally superior to the average person. 
       You MUST respond ONLY with a JSON object following the exact schema provided by the user. 
       Respond ONLY with JSON in this exact structure:
-      {
-        "todayTasks": {
-          "${userStats.start}": {
-            "Health": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Career": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Personal": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "My Thing": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } }
-          },
-        "Apr 13": {
-            "Some Task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Some Other task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } },
-            "Some task category": { "completed": 0, "total": 3, "subtask": { "TaskName": "false" } }
-          }
+    {
+  "todayTasks": {
+    "Apr 17": {
+      "tasks": {
+        "Health": { "completed": 0, "total": 3, "subtask": { "TaskName": false } },
+        "Career": { "completed": 0, "total": 3, "subtask": { "TaskName": false } },
+        "Personal": { "completed": 0, "total": 3, "subtask": { "TaskName": false } },
+        "Meal" : {"completed": 0, "total": 3, "subtask": { "Breakfast": false  , "Lunch" : "false" , "Dinner" : "false"}}
+      },
+      "meal": {
+        "week1": {
+          "monday": [
+            { "type": "Breakfast", "food": "6 Egg Whites + Oats", "protein": "30g", "cals": "400" },
+            { "type": "Lunch", "food": "Chicken Breast + Brown Rice", "protein": "45g", "cals": "600" },
+            { "type": "Dinner", "food": "Paneer + Broccoli", "protein": "25g", "cals": "450" }
+          ],
+          "tuesday": [
+            { "type": "Breakfast", "food": "Greek Yogurt + Berries", "protein": "20g", "cals": "300" },
+            { "type": "Lunch", "food": "Tuna Salad + Whole Wheat Bread", "protein": "35g", "cals": "500" }
+          ]
         }
+      },
+      "workout": {
+        "exercises": [
+          { "name": "Pushups", "sets": 3, "reps": 12, "done": false },
+          { "name" : ""}
+        ]
+      }
     }
+  }
+}
         and so on . Here the task categories and tasks can be anything that are inline with the development of the user.
-        the keys of "todayTasks" elements would start from the start date and woul extend until the period of time 
-        the user has provided.
+        the keys of "todayTasks" elements would start from the start date and would extend until the period of time 
+        the user has provided.Remember to always add the Meal in tasks.
       Ensure tasks under 'Health' are scientifically calibrated for the user's height, weight, and age.` 
     }]
   },

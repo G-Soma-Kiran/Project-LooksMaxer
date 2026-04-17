@@ -413,7 +413,7 @@ body::-webkit-scrollbar{
     font-weight: 700;
     font-size: 32px;
     color: var(--text-main);
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
@@ -584,7 +584,7 @@ body::-webkit-scrollbar{
     padding : 10px;
     background-color: #FFD700;
     cursor: pointer;
-    
+
 }
 
 .activate-looksmax-container input{
@@ -600,3 +600,8 @@ body::-webkit-scrollbar{
     gap : 10px;
 }
 
+
+
+button:active{
+    transform: scale(0.95)  translateY(3px);
+}

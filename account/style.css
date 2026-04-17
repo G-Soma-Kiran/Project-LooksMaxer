@@ -194,7 +194,9 @@ h1{
     bottom : 0;
 }
 #first{
-    background-color: pink;
+    /* background-color: pink; */
+    background: #0a0a0a url("first.png") no-repeat center center;
+    background-size: cover;
 }
 #second{
     background-color: green;
@@ -217,6 +219,10 @@ h1{
     background-color: #235D7B;
     padding : 10px;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    height : 200px;
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
     
 }
 .inner_page_body2:hover{
@@ -416,4 +422,44 @@ h1{
     padding : 18px 132px 18px 132px;
     margin-left: -100px;  
     margin-right: -100px; 
+}
+
+.inner_page_body2 {
+    background: #230D7B; 
+    backdrop-filter: blur(12px);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 450px; 
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.inner_page_body2 div {
+    display: flex;
+    justify-content: space-between; 
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.inner_page_body2 div:last-child {
+    border-bottom: none; 
+}
+
+.inner_page_body2 span:first-child {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+.inner_page_body2 span:last-child {
+    color: var(--text-main);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
 }

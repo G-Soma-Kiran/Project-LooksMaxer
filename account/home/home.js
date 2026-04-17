@@ -1,13 +1,33 @@
-const meal_plan = {
-    week1:{
-        monday : "chicken + rice",
-        tuesday : "Eggs + bread"
-    },
-    week2:{
-        monday :"maakichu",
-        tuesday  : "Pikachu"
-    }
+// const meal_plan = {
+//     week1:{
+//         monday : "chicken + rice",
+//         tuesday : "Eggs + bread"
+//     },
+//     week2:{
+//         monday :"maakichu",
+//         tuesday  : "Pikachu"
+//     }
 
+// }
+let meal_plan = {
+    week1: {
+        monday: [
+            { type: "Breakfast", food: "6 Egg Whites + Oats", protein: "30g", cals: "400" },
+            { type: "Lunch", food: "Chicken Breast + Brown Rice", protein: "45g", cals: "600" },
+            { type: "Dinner", food: "Paneer + Broccoli", protein: "25g", cals: "450" }
+        ],
+        tuesday: [
+            { type: "Breakfast", food: "Greek Yogurt + Berries", protein: "20g", cals: "300" },
+            { type: "Lunch", food: "Tuna Salad + Whole Wheat Bread", protein: "35g", cals: "500" }
+        ]
+    },
+};
+
+async function loadUserData() {
+    const response = await fetch('http://127.0.0.1:5000/send-user-data');
+    const data = await response.json();
+    // meal_plan = data['parameters']['todayTasks']['meal'];
+    console.log( data['parameters']['todayTasks']['meal']);
 }
 
 let activatedWeek;
@@ -24,10 +44,11 @@ function changeColor(btn){
     btn.parentElement.style.borderBottom = "4px solid #d4af37";
     
     activatedWeek=btn.id;
+    renderMeals();
     if(activatedDay == undefined){
         return
     }
-    document.getElementById("meal_content").innerText = meal_plan[activatedWeek][activatedDay];
+    // document.getElementById("meal_content").innerText = meal_plan[activatedWeek][activatedDay];
 }
 
 function changeColour(btn){
@@ -35,10 +56,11 @@ function changeColour(btn){
         .forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     activatedDay = btn.id
+    renderMeals();
     if(activatedWeek == undefined){
         return
     }
-    document.getElementById("meal_content").innerText = meal_plan[activatedWeek][activatedDay];
+    // document.getElementById("meal_content").innerText = meal_plan[activatedWeek][activatedDay];
 }
 
 let currentStart = 1;
@@ -46,9 +68,8 @@ const totalWeeks = 20;
 
 function renderWeeks(){
     const row = document.getElementById("weekRow");
-    row.innerHTML = ""; // clear old weeks
+    row.innerHTML = ""; 
 
-    // show 6 weeks
     for(let i = currentStart; i < currentStart + 6; i++){
         if(i > totalWeeks) break;
 
@@ -59,7 +80,7 @@ function renderWeeks(){
         `;
     }
 
-    // add ➡ button
+
     row.innerHTML += `
         <td class="border_yes">
              <ul>
@@ -74,7 +95,7 @@ function nextBlock(){
     currentStart += 6;
 
     if(currentStart > totalWeeks){
-        currentStart = 1; // restart (optional)
+        currentStart = 1; 
     }
 
     renderWeeks();
@@ -153,3 +174,37 @@ animateProgress(80 , document.getElementById("somethingProgressCircle") , docume
 
 //circle bmi end
 
+
+let user ={};
+userPersonals = {}
+async function loadUserData() {
+    const response = await fetch('http://127.0.0.1:5000/send-user-data');
+    const data = await response.json();
+    user = data;
+    userPersonals = data.personals;
+}
+// animateProgress(userPersonals["Weight"] * 1.4 , document.getElementById("protienProgressCircle") , document.getElementById("protienPercentText"));
+
+function renderMeals() {
+    const displayArea = document.getElementById("meal_content");
+    displayArea.innerHTML = ""; 
+
+    if (activatedWeek && activatedDay && meal_plan[activatedWeek][activatedDay]) {
+        const meals = meal_plan[activatedWeek][activatedDay];
+        console.log(meals);
+        meals.forEach(meal => {
+            const card = `
+            <a href="https://www.swiggy.com/search?query=${meal.food}" target = "_blank" style = "text-decoration : none; color : white;">
+                <div class="meal-card">
+                    <h3>${meal.type}</h3>
+                    <div class="food-items">${meal.food}</div>
+                    <div class="macros">🔥 ${meal.cals} kcal | 💪 ${meal.protein} protein</div>
+                </div>
+            </a>
+            `;
+            displayArea.innerHTML += card;
+        });
+    } else {
+        displayArea.innerHTML = "<p style='color: #666;'>Select a week and day to view your plan.</p>";
+    }
+}
