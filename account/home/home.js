@@ -9,6 +9,13 @@
 //     }
 
 // }
+const now=new Date();
+const normalDate = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+const dayOfWeek = now.getDay();  // Returns 0-6 (0 is Sunday, 6 is Saturday)
+const dayOfMonth = now.getDate(); // Returns 1-31
+const month      = now.getMonth() ; // Returns 1-12 (We add 1 because JS starts at 0)
+const year       = now.getFullYear();  // Returns 4-digit year (e.g., 2026)
 let meal_plan = {
     week1: {
         monday: [
@@ -214,8 +221,8 @@ function renderMeals() {
 async function init(){
     await loadUserData();
     let parameters = user.parameters;
-    console.log((Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks"))));
-    if(!(Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks")))){
+    console.log((Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks") && Object.keys(parameters.todayTasks).includes(`${normalDate}`))));
+    if(!(Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks") && Object.keys(parameters.todayTasks).includes(`${normalDate}`)))){
         confirm("Please start a plan first... Redirecting to profile page");
         window.location.href='/profile/profile.html';
     }

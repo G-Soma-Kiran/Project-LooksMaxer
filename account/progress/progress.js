@@ -28,7 +28,7 @@ async function init() {
     // console.log("loading...");
     // await getFitnessPlan();
     await loadUserData(); 
-    if(!(Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks")))){
+    if(!(Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks") && Object.keys(parameters.todayTasks).includes(`${normalDate}`)))){
         confirm("Please start a plan first... Redirecting to profile page");
         window.location.href='/profile/profile.html';
     }

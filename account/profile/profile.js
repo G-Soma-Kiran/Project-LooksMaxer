@@ -55,7 +55,8 @@ function renderPage(){
   document.querySelector("#WEIGHT").innerText = `${userData['Weight']} Kg`;
   document.querySelector("#AGE").innerText = `${userData['Age']} yrs`;
   document.querySelector("#NATIONALITY").innerText = `${userData['Nationality']}`;}
-  if(Object.keys(user.parameters).length !== 0 && ( Object.keys(user.parameters).includes("todayTasks"))){
+  console.log(Object.keys(user.parameters.todayTasks));
+  if(Object.keys(user.parameters).length !== 0 && ( Object.keys(user.parameters).includes("todayTasks") && Object.keys(user.parameters.todayTasks).includes(`${normalDate}`))){
     document.querySelector("#PLAN").innerText = "Active";
     document.querySelector("#Activate-button").style.display = "none";
 
@@ -259,6 +260,7 @@ const requestBody = {
     return true;
   } catch (error) {
     console.error("Failed to generate plan:", error);
+    confirm("Some Error Occured , Please try Again Later");
     return false;
   }
 }
