@@ -120,6 +120,8 @@ h1{
     padding : 40px;
     height : auto;
     padding-top: 70px;
+    align-items: center;
+    justify-content: center;
 
 }
 #left_portion{

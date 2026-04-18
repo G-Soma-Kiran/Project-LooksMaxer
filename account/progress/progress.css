@@ -948,3 +948,11 @@ flex : 1;
 
 
 
+#flip{
+    padding : 6px 10px;
+    background-color: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 40px;
+}

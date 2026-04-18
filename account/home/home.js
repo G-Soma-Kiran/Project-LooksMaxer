@@ -22,11 +22,13 @@ let meal_plan = {
         ]
     },
 };
+let user = {};
 
 async function loadUserData() {
     const response = await fetch('http://127.0.0.1:5000/send-user-data');
     const data = await response.json();
-    // meal_plan = data['parameters']['todayTasks']['meal'];
+
+    meal_plan = data['parameters']['todayTasks']['meal'];
     console.log( data['parameters']['todayTasks']['meal']);
 }
 
@@ -175,7 +177,6 @@ animateProgress(80 , document.getElementById("somethingProgressCircle") , docume
 //circle bmi end
 
 
-let user ={};
 userPersonals = {}
 async function loadUserData() {
     const response = await fetch('http://127.0.0.1:5000/send-user-data');
@@ -208,3 +209,16 @@ function renderMeals() {
         displayArea.innerHTML = "<p style='color: #666;'>Select a week and day to view your plan.</p>";
     }
 }
+
+
+async function init(){
+    await loadUserData();
+    let parameters = user.parameters;
+    console.log((Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks"))));
+    if(!(Object.keys(parameters).length !== 0 && ( Object.keys(parameters).includes("todayTasks")))){
+        confirm("Please start a plan first... Redirecting to profile page");
+        window.location.href='/profile/profile.html';
+    }
+}
+
+init();

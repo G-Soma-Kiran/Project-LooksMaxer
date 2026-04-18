@@ -605,3 +605,20 @@ body::-webkit-scrollbar{
 button:active{
     transform: scale(0.95)  translateY(3px);
 }
+body::-webkit-scrollbar{
+    display : none;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gold);
+}
+

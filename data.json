@@ -1,1 +1,730 @@
-{"RIZER": {"password": "RIZERRIZER", "personals": {"Height": "172", "Weight": "60", "Age": "18", "Nationality": "Indian"}, "parameters": {"dailyTotal": {"Apr 1": [1, 5], "Apr 12": [13, 14], "Apr 13": [4, 14], "Apr 14": [6, 14], "Apr 15": [0, 10], "Apr 16": [1, 14], "Apr 17": [1, 12], "Apr 2": [1, 14], "Apr 3": [0, 14], "Apr 4": [15, 20]}, "streak": 1, "todayTasks": {"Apr 17": {"Career": {"completed": 0, "subtask": {"Dedicate 1 hour to learning a new skill relevant to your desired field (e.g., coding, data analysis, design)": "false", "Read 2-3 articles from reputable industry publications or thought leaders": "false", "Update your professional online profile (e.g., LinkedIn) or explore potential mentors": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"Brisk 30-minute outdoor walk or light jog": "false", "Consume 3 liters of water and ensure 3 balanced meals with adequate protein": "false", "Full-body strength workout (bodyweight or light weights) for 45 mins": "false"}, "total": 3}, "My Thing": {"completed": 1, "subtask": {"Learn one new fact or concept about a topic outside your usual interests": "false", "Spend 1 hour practicing a hobby or skill you are passionate about (e.g., playing an instrument, drawing, writing)": "true", "Work on a personal side project for 45 minutes (e.g., building a small app, creating content)": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Journal for 15 minutes, reflecting on goals and gratitude": "false", "Practice 10 minutes of mindfulness meditation or deep breathing exercises": "false", "Read 30 minutes of a non-fiction book focused on personal development or finance": "false"}, "total": 3}}, "Apr 18": {"Career": {"completed": 0, "subtask": {"Apply the skill learned yesterday to a small practical exercise or problem": "false", "Outline your top 3 career-related goals for the upcoming week and identify first steps": "false", "Research 2-3 educational courses or certifications that could enhance your career prospects": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"Engage in 20 minutes of dynamic stretching or yoga for flexibility and recovery": "false", "Perform a 30-minute bodyweight circuit (e.g., push-ups, squats, planks, lunges)": "false", "Prepare a nutrient-dense breakfast and pack a healthy lunch for the day": "false"}, "total": 3}, "My Thing": {"completed": 0, "subtask": {"Dedicate 1 hour to advancing your personal side project or creative endeavor": "false", "Explore a new technique or resource related to your chosen hobby/skill": "false", "Reflect on your progress in 'My Thing' category and set a small goal for tomorrow": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Connect with a family member or friend for a meaningful conversation (at least 15 minutes)": "false", "Practice mindful eating for at least one meal, focusing on taste, texture, and satiety": "false", "Spend 30 minutes decluttering or organizing your personal workspace or digital files": "false"}, "total": 3}}}}}, "AI": {"password": "AIAIAIAI", "parameters": {"dailyTotal": {"Apr 12": [3, 12], "Apr 13": [0, 12], "Apr 14": [2, 12]}, "streak": 3, "todayTasks": {"Apr 14": {"Career": {"completed": 2, "subtask": {"Daily Career Goal Review & Planning": "true", "Dedicated Skill Learning (1 hour)": "true", "Professional Networking (2 connections)": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"7-8 Hours Quality Sleep": "false", "Balanced Meals (3) & Hydration (3-4L water)": "false", "Strength Training (Full Body, 60 min)": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Meaningful Social Connection (15 min)": "false", "Mindfulness Meditation (15 min)": "false", "Non-Fiction Reading (30 min)": "false"}, "total": 3}, "Skill Development": {"completed": 0, "subtask": {"Creative Hobby (30 min)": "false", "Language Practice (30 min)": "false", "Problem-Solving Exercise (20 min)": "false"}, "total": 3}}, "Apr 15": {"Career": {"completed": 0, "subtask": {"High-Priority Project Work (2 hours)": "false", "Review Skill Learning Notes": "false", "Seek or Provide Professional Feedback": "false"}, "total": 3}, "Community & Growth": {"completed": 0, "subtask": {"Daily Achievements & Improvement Reflection": "false", "Offer Assistance to Others": "false", "Try One New Experience": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"Cardio (30-45 min) + Core Workout": "false", "Flexibility & Mobility Session (20 min)": "false", "Meal Prep & Healthy Snack Planning": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Financial Literacy Study (20 min)": "false", "Journaling & Reflection (15 min)": "false", "Outdoor Time (30 min)": "false"}, "total": 3}}}}}, "user": {"password": "useruser", "parameters": {"dailyTotal": {"Apr 17": [0, 12]}, "todayTasks": {"Apr 17": {"Career": {"completed": 0, "subtask": {"Dedicate 1 hour to learning a new in-demand skill (e.g., Python, UI/UX basics)": "false", "Research 3 potential career paths or higher education programs": "false", "Update your professional online profile (e.g., LinkedIn, GitHub)": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"Consume 70g+ Protein (e.g., lentils, paneer, chicken)": "false", "Hydrate with 2 Liters of Water before 2 PM": "false", "Strength Training (Full Body Focus)": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Journal 10 minutes about your goals and reflections for the day": "false", "Practice 15 minutes of mindfulness meditation or deep breathing": "false", "Read 30 pages of a non-fiction book for personal growth": "false"}, "total": 3}, "Skill Development": {"completed": 0, "subtask": {"Spend 1 hour practicing a specific hobby or personal skill (e.g., playing an instrument, drawing)": "false", "Watch a documentary or online course related to a new interest for 30 minutes": "false", "Work on a personal project for 45 minutes (e.g., coding a small app, writing a short story)": "false"}, "total": 3}}, "Apr 18": {"Career": {"completed": 0, "subtask": {"Apply a learned skill to a small practical task or project": "false", "Read 2 articles on current trends in your chosen industry or field of interest": "false", "Set 3 actionable short-term career goals for the next month": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"Cardiovascular Exercise (e.g., 30-minute brisk walk, run, or cycle)": "false", "Ensure balanced meals with adequate fiber (fruits, vegetables, whole grains)": "false", "Perform 20 minutes of stretching or yoga for flexibility and mobility": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Connect with a family member or friend for at least 30 minutes": "false", "Dedicate time to a passion project or creative outlet for 1 hour": "false", "Learn about basic financial literacy (e.g., budgeting, saving) for 20 minutes": "false"}, "total": 3}, "Skill Development": {"completed": 0, "subtask": {"Explore resources for further learning in your chosen skill area (e.g., online courses, books)": "false", "Review progress on your personal project and plan next steps": "false", "Seek feedback on a skill or project from a peer or mentor": "false"}, "total": 3}}}, "streak": 0}, "personals": {"Height": "172", "Weight": "60", "Age": "18", "Nationality": "Indian"}}, "ghop": {"password": "ghopghop", "parameters": {"dailyTotal": {"Apr 17": [1, 12]}, "todayTasks": {"Apr 17": {"Career": {"completed": 0, "subtask": {"Dedicate 1 hour to learning a new skill relevant to your desired career path (e.g., coding, design software, language).": "false", "Research 3 industry leaders or companies in your field of interest and note down key insights.": "false", "Review your academic/professional goals for the next month and outline 3 actionable steps to achieve them.": "false"}, "total": 3}, "Health": {"completed": 0, "subtask": {"Complete a 45-minute workout: 25 min cardio (jogging/cycling) + 20 min bodyweight strength (squats, lunges, push-ups, planks)": "false", "Consume 3 balanced meals focusing on lean protein, complex carbohydrates, and healthy fats. Include at least 2 servings of vegetables.": "false", "Drink 3 liters of water throughout the day and ensure 7-8 hours of quality sleep tonight.": "false"}, "total": 3}, "Mindset Mastery": {"completed": 1, "subtask": {"Before bed, list 3 specific things you are grateful for from today.": "true", "Spend 30 minutes working on a challenging puzzle, a complex problem from your studies, or a brain-teaser.": "false", "Start your day with 5 minutes of positive affirmations or visualization of your daily success.": "false"}, "total": 3}, "Personal": {"completed": 0, "subtask": {"Connect with a family member or friend for at least 20 minutes, or spend 15 minutes journaling your thoughts and reflections.": "false", "Read for 30 minutes from a non-fiction book that promotes personal growth or a classic literary work.": "false", "Spend 45 minutes engaging in a personal hobby or creative outlet (e.g., playing an instrument, drawing, writing, gardening).": "false"}, "total": 3}}}, "streak": 0}, "personals": {"Height": "160", "Weight": "50", "Age": "19", "Nationality": "Indian"}}, "shit": {"password": "shitshitshitshit", "parameters": {"dailyTotal": {}}, "personals": {}}, "lala": {"password": "lalalala", "parameters": {"dailyTotal": {"Apr 17": [2, 9]}, "streak": 0, "todayTasks": {"Apr 17": {"meal": {"week1": {"monday": [{"cals": "400", "food": "Scrambled Paneer (100g) with 2 Whole Wheat Roti", "protein": "20g", "type": "Breakfast"}, {"cals": "650", "food": "Chicken Curry (150g chicken breast) with 1 cup Brown Rice and 1 cup Dal", "protein": "45g", "type": "Lunch"}, {"cals": "400", "food": "Mixed Vegetable Salad with Grilled Fish (100g) or Grilled Paneer (100g)", "protein": "28g", "type": "Dinner"}]}}, "tasks": {"Career": {"completed": 0, "subtask": {"Dedicate 1 hour to skill development (e.g., coding, language learning, design)": false, "Read an article or watch a documentary related to your field of interest": false, "Research potential career paths or higher education options for 30 minutes": false}, "total": 3}, "Health": {"completed": 1, "subtask": {"Drink 3 Liters of Water": "true", "Ensure 7-8 hours of quality sleep": false, "Perform 30 minutes of moderate cardio (e.g., brisk walking, jogging)": false}, "total": 3}, "Personal": {"completed": 1, "subtask": {"Connect with a mentor or positive peer for 20 minutes": "false", "Journal for 15 minutes about your goals and reflections": "true", "Practice 10 minutes of mindfulness meditation or deep breathing": false}, "total": 3}}, "workout": {"exercises": [{"done": false, "name": "Pushups", "reps": 12, "sets": 3}, {"done": false, "name": "Bodyweight Squats", "reps": 15, "sets": 3}, {"done": false, "name": "Plank", "reps": "45 seconds", "sets": 3}, {"done": false, "name": "Lunges (each leg)", "reps": 10, "sets": 3}], "status": "In Progress"}}}}, "personals": {"Height": "172", "Weight": "60", "Age": "18", "Nationality": "Indian"}}}
+{
+    "RIZER": {
+        "password": "RIZERRIZER",
+        "personals": {
+            "Height": "172",
+            "Weight": "60",
+            "Age": "18",
+            "Nationality": "Indian"
+        },
+        "parameters": {
+            "dailyTotal": {
+                "Apr 1": [
+                    1,
+                    5
+                ],
+                "Apr 12": [
+                    13,
+                    14
+                ],
+                "Apr 13": [
+                    4,
+                    14
+                ],
+                "Apr 14": [
+                    6,
+                    14
+                ],
+                "Apr 15": [
+                    0,
+                    10
+                ],
+                "Apr 16": [
+                    1,
+                    14
+                ],
+                "Apr 17": [
+                    4,
+                    12
+                ],
+                "Apr 2": [
+                    1,
+                    14
+                ],
+                "Apr 3": [
+                    0,
+                    14
+                ],
+                "Apr 4": [
+                    15,
+                    20
+                ]
+            },
+            "streak": 1,
+            "todayTasks": {
+                "Apr 17": {
+                    "meal": {
+                        "week1": {
+                            "monday": [
+                                {
+                                    "cals": "410",
+                                    "food": "6 Egg Whites + 50g Oats + 1 Scoop Whey Protein",
+                                    "protein": "43g",
+                                    "type": "Breakfast"
+                                },
+                                {
+                                    "cals": "650",
+                                    "food": "150g Grilled Chicken Breast + 100g Brown Rice + Mixed Steamed Vegetables",
+                                    "protein": "52g",
+                                    "type": "Lunch"
+                                },
+                                {
+                                    "cals": "390",
+                                    "food": "100g Paneer Bhurji (low oil) + Large serving of Broccoli/Spinach Sabzi",
+                                    "protein": "25g",
+                                    "type": "Dinner"
+                                }
+                            ]
+                        }
+                    },
+                    "tasks": {
+                        "Career": {
+                            "completed": 2,
+                            "subtask": {
+                                "Dedicate 45 minutes to learning a new skill relevant to your profession": "true",
+                                "Respond to all pending work communications within 2 hours of receiving them": "false",
+                                "Review your top 3 professional goals and plan one actionable step for each": "true"
+                            },
+                            "total": 3
+                        },
+                        "Health": {
+                            "completed": 2,
+                            "subtask": {
+                                "30-Minute Brisk Walk or Light Jog (focus on consistent movement)": "false",
+                                "Complete 3 sets of 10-12 Bodyweight Squats": "true",
+                                "Drink 3-4 Liters of Water throughout the day": "true"
+                            },
+                            "total": 3
+                        },
+                        "Meal": {
+                            "completed": 0,
+                            "subtask": {
+                                "Breakfast": false,
+                                "Dinner": false,
+                                "Lunch": false
+                            },
+                            "total": 3
+                        },
+                        "Personal": {
+                            "completed": 0,
+                            "subtask": {
+                                "Journal for 15 minutes about your day's achievements and challenges": false,
+                                "Practice 10 minutes of mindfulness meditation or deep breathing": false,
+                                "Read 20 pages of a non-fiction book that promotes personal growth": false
+                            },
+                            "total": 3
+                        }
+                    },
+                    "workout": {
+                        "exercises": [
+                            {
+                                "done": false,
+                                "name": "Bodyweight Squats",
+                                "reps": 12,
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Incline Push-ups (against a wall or elevated surface)",
+                                "reps": 10,
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "duration_seconds": 30,
+                                "name": "Plank",
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Walking Lunges",
+                                "reps": 10,
+                                "sets": 3
+                            }
+                        ]
+                    }
+                },
+                "Apr 18": {
+                    "Career": {
+                        "completed": 0,
+                        "subtask": {
+                            "Apply the skill learned yesterday to a small practical exercise or problem": "false",
+                            "Outline your top 3 career-related goals for the upcoming week and identify first steps": "false",
+                            "Research 2-3 educational courses or certifications that could enhance your career prospects": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "Engage in 20 minutes of dynamic stretching or yoga for flexibility and recovery": "false",
+                            "Perform a 30-minute bodyweight circuit (e.g., push-ups, squats, planks, lunges)": "false",
+                            "Prepare a nutrient-dense breakfast and pack a healthy lunch for the day": "false"
+                        },
+                        "total": 3
+                    },
+                    "My Thing": {
+                        "completed": 0,
+                        "subtask": {
+                            "Dedicate 1 hour to advancing your personal side project or creative endeavor": "false",
+                            "Explore a new technique or resource related to your chosen hobby/skill": "false",
+                            "Reflect on your progress in 'My Thing' category and set a small goal for tomorrow": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Connect with a family member or friend for a meaningful conversation (at least 15 minutes)": "false",
+                            "Practice mindful eating for at least one meal, focusing on taste, texture, and satiety": "false",
+                            "Spend 30 minutes decluttering or organizing your personal workspace or digital files": "false"
+                        },
+                        "total": 3
+                    }
+                },
+                "Apr 7": {
+                    "Career": {
+                        "completed": 0,
+                        "subtask": {
+                            "Dedicate 1 hour to learning a new skill relevant to your desired field (e.g., coding, data analysis, design)": "false",
+                            "Read 2-3 articles from reputable industry publications or thought leaders": "false",
+                            "Update your professional online profile (e.g., LinkedIn) or explore potential mentors": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "Brisk 30-minute outdoor walk or light jog": "false",
+                            "Consume 3 liters of water and ensure 3 balanced meals with adequate protein": "false",
+                            "Full-body strength workout (bodyweight or light weights) for 45 mins": "false"
+                        },
+                        "total": 3
+                    },
+                    "My Thing": {
+                        "completed": 1,
+                        "subtask": {
+                            "Learn one new fact or concept about a topic outside your usual interests": "false",
+                            "Spend 1 hour practicing a hobby or skill you are passionate about (e.g., playing an instrument, drawing, writing)": "true",
+                            "Work on a personal side project for 45 minutes (e.g., building a small app, creating content)": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Journal for 15 minutes, reflecting on goals and gratitude": "false",
+                            "Practice 10 minutes of mindfulness meditation or deep breathing exercises": "false",
+                            "Read 30 minutes of a non-fiction book focused on personal development or finance": "false"
+                        },
+                        "total": 3
+                    }
+                }
+            }
+        }
+    },
+    "AI": {
+        "password": "AIAIAIAI",
+        "parameters": {
+            "dailyTotal": {
+                "Apr 12": [
+                    3,
+                    12
+                ],
+                "Apr 13": [
+                    0,
+                    12
+                ],
+                "Apr 14": [
+                    2,
+                    12
+                ]
+            },
+            "streak": 3,
+            "todayTasks": {
+                "Apr 14": {
+                    "Career": {
+                        "completed": 2,
+                        "subtask": {
+                            "Daily Career Goal Review & Planning": "true",
+                            "Dedicated Skill Learning (1 hour)": "true",
+                            "Professional Networking (2 connections)": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "7-8 Hours Quality Sleep": "false",
+                            "Balanced Meals (3) & Hydration (3-4L water)": "false",
+                            "Strength Training (Full Body, 60 min)": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Meaningful Social Connection (15 min)": "false",
+                            "Mindfulness Meditation (15 min)": "false",
+                            "Non-Fiction Reading (30 min)": "false"
+                        },
+                        "total": 3
+                    },
+                    "Skill Development": {
+                        "completed": 0,
+                        "subtask": {
+                            "Creative Hobby (30 min)": "false",
+                            "Language Practice (30 min)": "false",
+                            "Problem-Solving Exercise (20 min)": "false"
+                        },
+                        "total": 3
+                    }
+                },
+                "Apr 15": {
+                    "Career": {
+                        "completed": 0,
+                        "subtask": {
+                            "High-Priority Project Work (2 hours)": "false",
+                            "Review Skill Learning Notes": "false",
+                            "Seek or Provide Professional Feedback": "false"
+                        },
+                        "total": 3
+                    },
+                    "Community & Growth": {
+                        "completed": 0,
+                        "subtask": {
+                            "Daily Achievements & Improvement Reflection": "false",
+                            "Offer Assistance to Others": "false",
+                            "Try One New Experience": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "Cardio (30-45 min) + Core Workout": "false",
+                            "Flexibility & Mobility Session (20 min)": "false",
+                            "Meal Prep & Healthy Snack Planning": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Financial Literacy Study (20 min)": "false",
+                            "Journaling & Reflection (15 min)": "false",
+                            "Outdoor Time (30 min)": "false"
+                        },
+                        "total": 3
+                    }
+                }
+            }
+        }
+    },
+    "user": {
+        "password": "useruser",
+        "parameters": {
+            "dailyTotal": {
+                "Apr 17": [
+                    0,
+                    12
+                ]
+            },
+            "todayTasks": {
+                "Apr 17": {
+                    "Career": {
+                        "completed": 0,
+                        "subtask": {
+                            "Dedicate 1 hour to learning a new in-demand skill (e.g., Python, UI/UX basics)": "false",
+                            "Research 3 potential career paths or higher education programs": "false",
+                            "Update your professional online profile (e.g., LinkedIn, GitHub)": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "Consume 70g+ Protein (e.g., lentils, paneer, chicken)": "false",
+                            "Hydrate with 2 Liters of Water before 2 PM": "false",
+                            "Strength Training (Full Body Focus)": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Journal 10 minutes about your goals and reflections for the day": "false",
+                            "Practice 15 minutes of mindfulness meditation or deep breathing": "false",
+                            "Read 30 pages of a non-fiction book for personal growth": "false"
+                        },
+                        "total": 3
+                    },
+                    "Skill Development": {
+                        "completed": 0,
+                        "subtask": {
+                            "Spend 1 hour practicing a specific hobby or personal skill (e.g., playing an instrument, drawing)": "false",
+                            "Watch a documentary or online course related to a new interest for 30 minutes": "false",
+                            "Work on a personal project for 45 minutes (e.g., coding a small app, writing a short story)": "false"
+                        },
+                        "total": 3
+                    }
+                },
+                "Apr 18": {
+                    "Career": {
+                        "completed": 0,
+                        "subtask": {
+                            "Apply a learned skill to a small practical task or project": "false",
+                            "Read 2 articles on current trends in your chosen industry or field of interest": "false",
+                            "Set 3 actionable short-term career goals for the next month": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "Cardiovascular Exercise (e.g., 30-minute brisk walk, run, or cycle)": "false",
+                            "Ensure balanced meals with adequate fiber (fruits, vegetables, whole grains)": "false",
+                            "Perform 20 minutes of stretching or yoga for flexibility and mobility": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Connect with a family member or friend for at least 30 minutes": "false",
+                            "Dedicate time to a passion project or creative outlet for 1 hour": "false",
+                            "Learn about basic financial literacy (e.g., budgeting, saving) for 20 minutes": "false"
+                        },
+                        "total": 3
+                    },
+                    "Skill Development": {
+                        "completed": 0,
+                        "subtask": {
+                            "Explore resources for further learning in your chosen skill area (e.g., online courses, books)": "false",
+                            "Review progress on your personal project and plan next steps": "false",
+                            "Seek feedback on a skill or project from a peer or mentor": "false"
+                        },
+                        "total": 3
+                    }
+                }
+            },
+            "streak": 0
+        },
+        "personals": {
+            "Height": "172",
+            "Weight": "60",
+            "Age": "18",
+            "Nationality": "Indian"
+        }
+    },
+    "ghop": {
+        "password": "ghopghop",
+        "parameters": {
+            "dailyTotal": {
+                "Apr 17": [
+                    1,
+                    12
+                ]
+            },
+            "todayTasks": {
+                "Apr 17": {
+                    "Career": {
+                        "completed": 0,
+                        "subtask": {
+                            "Dedicate 1 hour to learning a new skill relevant to your desired career path (e.g., coding, design software, language).": "false",
+                            "Research 3 industry leaders or companies in your field of interest and note down key insights.": "false",
+                            "Review your academic/professional goals for the next month and outline 3 actionable steps to achieve them.": "false"
+                        },
+                        "total": 3
+                    },
+                    "Health": {
+                        "completed": 0,
+                        "subtask": {
+                            "Complete a 45-minute workout: 25 min cardio (jogging/cycling) + 20 min bodyweight strength (squats, lunges, push-ups, planks)": "false",
+                            "Consume 3 balanced meals focusing on lean protein, complex carbohydrates, and healthy fats. Include at least 2 servings of vegetables.": "false",
+                            "Drink 3 liters of water throughout the day and ensure 7-8 hours of quality sleep tonight.": "false"
+                        },
+                        "total": 3
+                    },
+                    "Mindset Mastery": {
+                        "completed": 1,
+                        "subtask": {
+                            "Before bed, list 3 specific things you are grateful for from today.": "true",
+                            "Spend 30 minutes working on a challenging puzzle, a complex problem from your studies, or a brain-teaser.": "false",
+                            "Start your day with 5 minutes of positive affirmations or visualization of your daily success.": "false"
+                        },
+                        "total": 3
+                    },
+                    "Personal": {
+                        "completed": 0,
+                        "subtask": {
+                            "Connect with a family member or friend for at least 20 minutes, or spend 15 minutes journaling your thoughts and reflections.": "false",
+                            "Read for 30 minutes from a non-fiction book that promotes personal growth or a classic literary work.": "false",
+                            "Spend 45 minutes engaging in a personal hobby or creative outlet (e.g., playing an instrument, drawing, writing, gardening).": "false"
+                        },
+                        "total": 3
+                    }
+                }
+            },
+            "streak": 0
+        },
+        "personals": {
+            "Height": "160",
+            "Weight": "50",
+            "Age": "19",
+            "Nationality": "Indian"
+        }
+    },
+    "shit": {
+        "password": "shitshitshitshit",
+        "parameters": {
+            "dailyTotal": {}
+        },
+        "personals": {}
+    },
+    "lala": {
+        "password": "lalalala",
+        "parameters": {
+            "dailyTotal": {
+                "Apr 17": [
+                    2,
+                    9
+                ]
+            },
+            "streak": 0,
+            "todayTasks": {
+                "Apr 17": {
+                    "meal": {
+                        "week1": {
+                            "monday": [
+                                {
+                                    "cals": "400",
+                                    "food": "Scrambled Paneer (100g) with 2 Whole Wheat Roti",
+                                    "protein": "20g",
+                                    "type": "Breakfast"
+                                },
+                                {
+                                    "cals": "650",
+                                    "food": "Chicken Curry (150g chicken breast) with 1 cup Brown Rice and 1 cup Dal",
+                                    "protein": "45g",
+                                    "type": "Lunch"
+                                },
+                                {
+                                    "cals": "400",
+                                    "food": "Mixed Vegetable Salad with Grilled Fish (100g) or Grilled Paneer (100g)",
+                                    "protein": "28g",
+                                    "type": "Dinner"
+                                }
+                            ]
+                        }
+                    },
+                    "tasks": {
+                        "Career": {
+                            "completed": 0,
+                            "subtask": {
+                                "Dedicate 1 hour to skill development (e.g., coding, language learning, design)": false,
+                                "Read an article or watch a documentary related to your field of interest": false,
+                                "Research potential career paths or higher education options for 30 minutes": false
+                            },
+                            "total": 3
+                        },
+                        "Health": {
+                            "completed": 1,
+                            "subtask": {
+                                "Drink 3 Liters of Water": "true",
+                                "Ensure 7-8 hours of quality sleep": false,
+                                "Perform 30 minutes of moderate cardio (e.g., brisk walking, jogging)": false
+                            },
+                            "total": 3
+                        },
+                        "Personal": {
+                            "completed": 1,
+                            "subtask": {
+                                "Connect with a mentor or positive peer for 20 minutes": "false",
+                                "Journal for 15 minutes about your goals and reflections": "true",
+                                "Practice 10 minutes of mindfulness meditation or deep breathing": false
+                            },
+                            "total": 3
+                        }
+                    },
+                    "workout": {
+                        "exercises": [
+                            {
+                                "done": false,
+                                "name": "Pushups",
+                                "reps": 12,
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Bodyweight Squats",
+                                "reps": 15,
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Plank",
+                                "reps": "45 seconds",
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Lunges (each leg)",
+                                "reps": 10,
+                                "sets": 3
+                            }
+                        ],
+                        "status": "In Progress"
+                    }
+                }
+            }
+        },
+        "personals": {
+            "Height": "172",
+            "Weight": "60",
+            "Age": "18",
+            "Nationality": "Indian"
+        }
+    },
+    "jacobi": {
+        "password": "jacobijacobi",
+        "parameters": {
+            "streak": 0,
+            "dailyTotal": {}
+        },
+        "personals": {}
+    },
+    "poorna": {
+        "password": "Poorna23",
+        "parameters": {
+            "dailyTotal": {
+                "Apr 17": [
+                    5,
+                    12
+                ]
+            },
+            "streak": 0,
+            "todayTasks": {
+                "Apr 17": {
+                    "meal": {
+                        "week1": {
+                            "monday": [
+                                {
+                                    "cals": "410",
+                                    "food": "6 Egg Whites + 50g Oats + 1 Scoop Whey Protein",
+                                    "protein": "43g",
+                                    "type": "Breakfast"
+                                },
+                                {
+                                    "cals": "650",
+                                    "food": "150g Grilled Chicken Breast + 100g Brown Rice + Mixed Steamed Vegetables",
+                                    "protein": "52g",
+                                    "type": "Lunch"
+                                },
+                                {
+                                    "cals": "390",
+                                    "food": "100g Paneer Bhurji (low oil) + Large serving of Broccoli/Spinach Sabzi",
+                                    "protein": "25g",
+                                    "type": "Dinner"
+                                }
+                            ]
+                        }
+                    },
+                    "tasks": {
+                        "Career": {
+                            "completed": 2,
+                            "subtask": {
+                                "Dedicate 45 minutes to learning a new skill relevant to your profession": "true",
+                                "Respond to all pending work communications within 2 hours of receiving them": "false",
+                                "Review your top 3 professional goals and plan one actionable step for each": "true"
+                            },
+                            "total": 3
+                        },
+                        "Health": {
+                            "completed": 3,
+                            "subtask": {
+                                "30-Minute Brisk Walk or Light Jog (focus on consistent movement)": "true",
+                                "Complete 3 sets of 10-12 Bodyweight Squats": "true",
+                                "Drink 3-4 Liters of Water throughout the day": "true"
+                            },
+                            "total": 3
+                        },
+                        "Meal": {
+                            "completed": 0,
+                            "subtask": {
+                                "Breakfast": false,
+                                "Dinner": false,
+                                "Lunch": false
+                            },
+                            "total": 3
+                        },
+                        "Personal": {
+                            "completed": 0,
+                            "subtask": {
+                                "Journal for 15 minutes about your day's achievements and challenges": false,
+                                "Practice 10 minutes of mindfulness meditation or deep breathing": false,
+                                "Read 20 pages of a non-fiction book that promotes personal growth": false
+                            },
+                            "total": 3
+                        }
+                    },
+                    "workout": {
+                        "exercises": [
+                            {
+                                "done": false,
+                                "name": "Bodyweight Squats",
+                                "reps": 12,
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Incline Push-ups (against a wall or elevated surface)",
+                                "reps": 10,
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "duration_seconds": 30,
+                                "name": "Plank",
+                                "sets": 3
+                            },
+                            {
+                                "done": false,
+                                "name": "Walking Lunges",
+                                "reps": 10,
+                                "sets": 3
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "personals": {
+            "Height": "172",
+            "Weight": "100",
+            "Age": "22",
+            "Nationality": "Indian"
+        }
+    },
+    "heliosxxx": {
+        "password": "Hjwrfbiuviabef",
+        "parameters": {
+            "streak": 0,
+            "dailyTotal": {}
+        },
+        "personals": {
+            "Height": "172",
+            "Weight": "84",
+            "Age": "18",
+            "Nationality": "Indian"
+        }
+    },
+    "hello": {
+        "password": "hello345",
+        "parameters": {
+            "streak": 0,
+            "dailyTotal": {}
+        },
+        "personals": {}
+    }
+}

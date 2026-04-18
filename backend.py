@@ -109,6 +109,11 @@ def progress_page():
 def workoutPlan_page():
     return render_template("/workoutPlan/workoutPlan.html")
 
+@app.route('/profile/quiz.html')
+def quiz_page():
+    return render_template("/profile/quiz.html")
+
+
 @app.route('/send-user-data')
 def send_user_data():
     try:
